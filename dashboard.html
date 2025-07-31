@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ISP Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo">DEEP INFOTECH</h1>
+            <nav class="main-nav">
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="#">All Plans</a></li>
+                    <li><a href="#">My Profile</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="index.html" id="logout-link">Sign Out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <h2 id="welcome-message">Welcome!</h2>
+            <p>Manage your billing, support tickets, and services all in one place.</p>
+
+            <div class="dashboard-cards">
+                <div class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM320 256c0-17.7-14.3-32-32-32H192c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32zM320 160c0-17.7-14.3-32-32-32H192c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32zM128 352c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H160c-17.7 0-32 14.3-32 32z"/></svg>
+                    </div>
+                    <h3>View Billing</h3>
+                    <p>View invoices and manage payments.</p>
+                    <a href="#" class="btn">Go to Billing</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M16.1 260.2c-22.6 12.9-20.5 47.3 3.6 57.3L160 376V479.3c0 18.1 14.6 32.7 32.7 32.7c9.7 0 18.9-4.3 25.1-11.8l62-74.3 123.9 51.6c18.9 7.9 40.8-4.5 43.9-24.7l64-416c1.9-12.1-3.4-24.3-13.5-31.2s-23.3-7.5-34-1.4l-448 256zm52.1 25.5L409.7 90.6 190.1 336l-22.7 27.2V304l-96.6-44.3z"/></svg>
+                    </div>
+                    <h3>My Tickets</h3>
+                    <p>Create and track support requests.</p>
+                    <a href="#" class="btn">View Tickets</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M406.5 399.6C387.4 353.3 341.1 320 288 320s-99.4 33.3-118.5 79.6C143.9 416.8 128 445.1 128 476.8V480c0 17.7 14.3 32 32 32h192c17.7 0 32-14.3 32-32v-3.2c0-31.7-15.9-60-41.5-77.2zM288 288c79.5 0 144-64.5 144-144S367.5 0 288 0S144 64.5 144 144s64.5 144 144 144z"/></svg>
+                    </div>
+                    <h3>My Profile</h3>
+                    <p>Update your contact information.</p>
+                    <a href="#" class="btn">Edit Profile</a>
+                </div>
+                <div class="card card-full-width">
+                    <h3>Network Status & Usage</h3>
+                    <div class="usage-chart">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle" id="usage-circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <text x="18" y="20.35" class="percentage" id="usage-text">0%</text>
+                        </svg>
+                        <div class="usage-details">
+                            <p><strong>Status:</strong> <span class="status-ok">Online</span></p>
+                            <p><strong>Monthly Data Used:</strong> 75.3 / 500 GB</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
